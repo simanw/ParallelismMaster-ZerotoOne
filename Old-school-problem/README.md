@@ -1,5 +1,5 @@
 # Three attempts to implement banking transfer
-- [Naive multithreaded program](.\multi.cpp) without any synchronization control.
+- [Naive multithreaded program](.\multithread.cpp) without any synchronization control.
 - [Atomic operations](.\atomic.cpp).
 - [Critical section](.\critical_section.cpp).
 
