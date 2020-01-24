@@ -1,0 +1,10 @@
+#BUILD
+g++ -O3 -pthread -march=native -g -o  critical_section ./critical_section.cpp
+g++ -O3 -pthread -march=native -g -o  atomic ./atomic.cpp
+g++ -O3 -pthread -march=native -g -o  multithread ./multithread.cpp
+
+#RUN   ./exe [number of thread] [number of accounts]
+For example:
+./critical_section 100 1024
+./atomic 100 1024
+./multithread 100 1024
