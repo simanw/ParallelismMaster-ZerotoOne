@@ -1,7 +1,9 @@
 # Three attempts to implement banking transfer
-- [Naive multithreaded program](.\multithread.cpp) without any synchronization control.
-- [Atomic operations](.\atomic.cpp).
-- [Critical section](.\critical_section.cpp).
+- [Naive multithreaded program](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/Old-school-problem/multithread.cpp) without any synchronization control.
+- [Atomic operations](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/Old-school-problem/atomic.cpp).
+- [Critical section](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/Old-school-problem/critical_section.cpp).
+
+### Notice: all experiments are conducted with 10,000,000 transcations.
 
 ## What's wrong with the naive multithreaded program?
 Function func_multi() runs correctly when there is only one thread except the main thread. Apart from this case, it fails no matter how many threads are. It is because we do nothing to control synchronization. Problems happen in this naive multithreaded program: data races, incoherence, inconsistence, etc. We explain problems for specific lines in comments. As a result, the total amount of balance of all accounts changes.
