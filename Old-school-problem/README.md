@@ -5,7 +5,7 @@
 
 ### Environment: 
 Linux, C++11, pthread.
-Here is the [compile and execution guide](.\compile info.txt)
+Here is the [compile and execution guide](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/Old-school-problem/compile%20info.txt)
 ### Notice:all experiments are conducted with 10,000,000 transcations.
 
 ## What's wrong with the naive multithreaded program?
