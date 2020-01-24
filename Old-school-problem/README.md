@@ -6,11 +6,11 @@
 ### Notice: all experiments are conducted with 10,000,000 transcations.
 
 ## What's wrong with the naive multithreaded program?
-Function func_multi() runs correctly when there is only one thread except the main thread. Apart from this case, it fails no matter how many threads are. It is because we do nothing to control synchronization. Problems happen in this naive multithreaded program: data races, incoherence, inconsistence, etc. We explain problems for specific lines in comments. As a result, the total amount of balance of all accounts changes.
+Function transfer_multi() runs correctly when there is only one thread except the main thread. Apart from this case, it fails no matter how many threads are. It is because we do nothing to control synchronization. Problems happen in this naive multithreaded program: data races, incoherence, inconsistence, etc. We explain problems for specific lines in comments. As a result, the total amount of balance of all accounts changes.
 
 
 ```
-void func_multi(int tid){
+void transfer_multi(int tid){
     unsigned int s0 = 0 + tid, s1 = 2 + tid, s2 = 3 + tid;
     int d;
     int s;
