@@ -11,9 +11,8 @@ Your program maintains an array of clients with their bank accounts and supports
 You need to ensure all accounts are in a consistent state, which means that negative balance is not allowed, and total amount of all accounts should not change.
 
 ### [Producer-consumer problem](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/tree/master/producer-consumer).
-Producer produces tasks that include three actions (insert, delete, lookup), while consumer executes tasks. Tasks are stored in a queue. The elements that are processed in each task are stored in a treeset.
+This application defines a producer that generates work tasks and consumers that consume the work tasks. Producer and consumer communication via a queue that has a maximum capacity of 100 tasks. Producer produces tasks that include three actions (insert, delete, lookup). The consumer executes the tasks by operating on a set.
 
-There are four scenerios:
-- One producer and one consumer
-- One producer and n consumers (n > 1)
-- One producer, but produces 100 tasks once; n consumers (n > 1)
+I implemented four solutions using locks, where each solution optimizes upon one before.
+
+
