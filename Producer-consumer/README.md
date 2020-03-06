@@ -17,6 +17,19 @@ I implemented multi-threaded version of producer-consumer program under four opt
     - The producer thread works the same as in Optimization 3
 
 ********
+### Analysis of a critical code block
+The following code block appears in Solution 1. The producer is trying to acquire the global lock on the queue.
+```C++
+    q_mtx.lock();
+    while (q.size() > 100) {
+        q_mtx.unlock();
+        q_mtx.lock();
+    }
+```
+Compiler optimized ```while (qm[qid].size() > 100)``` by storing the size of queue in a local cache. ```q.size()```is not an atomic operation, it can have a data race if any other thread is writing to the queue when it's called. Thus, a mutex is needed to protect queue's size.
+
+```q_mtx.unlock()``` within the while loop will wake up sleeping consumers.
+********
 
 ### Instructions for Build and Run
 BUILD
