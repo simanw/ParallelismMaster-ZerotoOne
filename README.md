@@ -15,4 +15,12 @@ This application defines a producer that generates work tasks and consumers that
 
 I implemented four solutions using locks, where each solution optimizes upon one before.
 
+******
+## Thread-safe data structures
+### [Linked list]
+
+
+### [B+ Tree]
+
+
 
