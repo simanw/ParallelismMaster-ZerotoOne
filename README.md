@@ -17,7 +17,7 @@ I implemented four solutions using locks, where each solution optimizes upon one
 
 ******
 ## Thread-safe data structures
-### [Linked list]
+### [Linked list](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/tree/master/linkedList)
 
 
 ### [B+ Tree]
