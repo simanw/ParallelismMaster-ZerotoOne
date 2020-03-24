@@ -1,7 +1,7 @@
 # Thread-safe B+ Tree
-********
-This multi-threaded implementation of B+ Tree utilizes two concurrent APIs: lookup and insertion. 
 
+This multi-threaded implementation of B+ Tree utilizes two concurrent APIs: lookup and insertion. 
+**********************
 ### Two concurrency solutions (implemented):
 - **Read-Write Lock (fine-grained locks)**
     Based on Crabbing protocol.
@@ -10,6 +10,7 @@ This multi-threaded implementation of B+ Tree utilizes two concurrent APIs: look
     --|-------|-------
     | **Write**| No | No |
     | **Read** | No | Yes |
+
     Multiple readers are allowed to acquire Read-lock, while only one writer is allowed to acquire a Write-lock at a time.
 
 
@@ -23,8 +24,8 @@ This multi-threaded implementation of B+ Tree utilizes two concurrent APIs: look
 
 **********
 #### Chats that help understand source codes
-![](./pictures/1.png)
-![](./pictures/2.png)
-![](./pictures/3.png)
-![](./pictures/4.png)
-![](./pictures/5.png)
+![](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/B%2BTree/pictures/1.PNG)
+![](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/B%2BTree/pictures/2.PNG)
+![](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/B%2BTree/pictures/3.PNG)
+![](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/B%2BTree/pictures/4.PNG)
+![](https://github.com/WangSiman-Carol/ParallelismMaster-ZerotoOne/blob/master/B%2BTree/pictures/5.PNG)
