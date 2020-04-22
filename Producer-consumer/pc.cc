@@ -121,7 +121,7 @@ void produce_multiq_batch(int qid, unsigned int *seed) {
     }
 
     for (int i = 0; i < NUM_PRODUCE; i++) {
-        task i;
+        task t;
         int action = rand_r(seed) % LOOKUP_RATIO;
 
         switch (action) {
@@ -243,7 +243,7 @@ void producer3(unsigned int *seed, int n_consumers) {
 };
 
 void consumer3(int* num_ops, int n_consumers, int tid) {
-    for (int i = 0; i < NUM_ITER/n_consumers, i++) 
+    for (int i = 0; i < NUM_ITER/n_consumers; i++) 
         *num_ops += consume_multiq(tid);
 };
 
