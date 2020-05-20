@@ -8,14 +8,14 @@
 #include <mutex>
 
 const long ITER = 10000000;
-const int SIZE = 1024*1024;
+const int SIZE = 1024;
 const int MONEY_START_AMT = 1000;
 std::vector<int64_t> money(SIZE, MONEY_START_AMT);
 std::vector<std::atomic<int64_t>> money_atomic(SIZE);
 
 std::mutex mtx;
 std::vector<std::mutex> mtxs(SIZE);
-
+//jjjjjjj
 void verify()
 {
     int res = 0;
@@ -114,14 +114,16 @@ void transfer_critical_fine(int tid)
 	if (s == d)
 	    continue;
 
-	if (s > d) {
-	    mtxs[s].lock();
-	    mtxs[d].lock();
-	}
-	else {
-	    mtxs[d].lock();
-	    mtxs[s].lock();
-	}
+	// if (s > d) {
+	//     mtxs[s].lock();
+	//     mtxs[d].lock();
+	// }
+	// else {
+	//     mtxs[d].lock();
+	//     mtxs[s].lock();
+	// }
+	mtxs[s].lock();
+	mtxs[d].lock();
 	if ((money[s] + money[d]) > 0) {
 	    money[s] -= amount;
 	    money[d] += amount;
