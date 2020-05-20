@@ -13,9 +13,9 @@ int main( int argc, const char* argv[] ){
 
         auto start = std::chrono::system_clock::now();
 
-        std::thread producer(producer4, &seed, num_threads);
+        std::thread producer(producer3, &seed, num_threads);
         for (int tid = 0; tid < num_threads; tid++){
-            consumers[tid] = std::thread (consumer4, &num_ops[tid], num_threads, tid);
+            consumers[tid] = std::thread (consumer3, &num_ops[tid], num_threads, tid);
         }
         producer.join();
         for (int tid = 0; tid < num_threads; tid++){
@@ -26,7 +26,7 @@ int main( int argc, const char* argv[] ){
         auto end = std::chrono::system_clock::now();
 
         auto elapsed = 
-            std::chrono::duration_cast<std::chrono::milliseconds(end - start);
+            std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
             std::cout << elapsed.count() << "ms. Operations: " << total_num_ops << std::endl;
 
     }
