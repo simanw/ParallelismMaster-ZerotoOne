@@ -38,23 +38,23 @@ void init();
 void init_partitioned(int n_consumers);
 
 // Single-threaded version
-void produce(unsigned int *seed);
-int consume();
+//void produce(unsigned int *seed);
+//int consume();
 
 // 
-void producer1(unsigned int *seed);
-void consumer1(int *num_ops, int tid);
+//void producer1(unsigned int *seed);
+//void consumer1(int *num_ops, int tid);
 
 //
-void producer2(unsigned int *seed, int n_consumers);
-void consumer2(int *num_ops, int n_consumers, int tid);
+//void producer2(unsigned int *seed, int n_consumers);
+//void consumer2(int *num_ops, int n_consumers, int tid);
 
 // 
 void producer3(unsigned int *seed, int n_consumers);
 void consumer3(int *num_ops, int n_consumers, int tid);
 
 //
-void producer4(unsigned int *seed, int n_consumers);
-void consumer4(int *num_ops, int n_consumers, int tid);
+// void producer4(unsigned int *seed, int n_consumers);
+// void consumer4(int *num_ops, int n_consumers, int tid);
 
 #endif

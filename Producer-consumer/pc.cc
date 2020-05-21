@@ -217,6 +217,7 @@ int consume_multiq_multis(int qid) {
 }
 
 // 
+/*
 void producer1(unsigned int *seed) {
     for (int i = 0; i < NUM_ITER; i++)
         produce(seed);
@@ -236,7 +237,7 @@ void consumer2(int* num_ops, int n_consumers, int tid) {
     for (int i = 0; i < NUM_ITER/n_consumers; i++)
         *num_ops += consume_multiq(tid);
 };
-
+*/
 void producer3(unsigned int *seed, int n_consumers) {
     for (int i = 0; i < NUM_ITER / NUM_PRODUCE; i++)
        produce_multiq_batch(i % n_consumers, seed);
@@ -247,6 +248,7 @@ void consumer3(int* num_ops, int n_consumers, int tid) {
         *num_ops += consume_multiq(tid);
 };
 
+/*
 void producer4(unsigned int *seed, int n_consumers) {
     for (int i = 0; i < NUM_ITER / NUM_PRODUCE; i ++)
         produce_multiq_batch(i % n_consumers, seed);
@@ -257,7 +259,7 @@ void consumer4(int* num_ops, int n_consumers, int tid) {
         *num_ops += consume_multiq_multis(tid);
 };
 
-
+*/
 void init() {
     unsigned int seed = 0;
 
